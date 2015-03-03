@@ -11,8 +11,10 @@ import java.util.Map;
  * @version Last modified 15/3/2
  * @since 0.0.1
  */
-public abstract class ReflectUntil {
+public abstract class CacheReflectUntil {
 
+    private static final Map<String, Method> cacheMethods = new HashMap<String, Method>();
+    private static final Map<String, Class> cacheClasses = new HashMap<String, Class>();
     /**
      * 根据方法名称，获取方法
      *
@@ -53,6 +55,9 @@ public abstract class ReflectUntil {
      * @return method
      */
     public static Method getMethodById(String id) throws NoSuchMethodException{
+        Method method = cacheMethods.get(id);
+        if (method != null) return method;
+
         int index = id.lastIndexOf(".");
 
         String className = id.substring(0, index);
@@ -65,7 +70,7 @@ public abstract class ReflectUntil {
             throw new NoSuchMethodException("class not found. className=" + className);
         }
 
-        Method method = getMethodByName(clazz, methodName);
+        method = getMethodByName(clazz, methodName);
         if (method == null){
             throw new NoSuchMethodException("in class no such method. methodName=" + methodName);
         }
