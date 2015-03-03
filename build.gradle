@@ -34,5 +34,7 @@ dependencies {
     compile 'org.openjdk.jmh:jmh-core:1.6.1',
             'org.openjdk.jmh:jmh-generator-annprocess:1.6.1'
 
+    compile 'org.mybatis:mybatis:3.2.8',
+            'org.mybatis:mybatis-spring:1.2.2'
 
 }

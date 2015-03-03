@@ -1,7 +1,9 @@
 package org.oyach.jmh;
 
 import org.openjdk.jmh.annotations.*;
+import org.oyach.jmh.mapper.ReflectUntil;
 
+import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -17,19 +19,19 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(value = Mode.AverageTime)
 @OutputTimeUnit(value = TimeUnit.NANOSECONDS)
 @Timeout(time = 60)
+@Threads(10)
 public class MethodBenchmark {
-
-    private static int i;
+    private static final String id = "org.oyach.jmh.mapper.UserMapper.findById";
+    private static final String id2 = "org.oyach.jmh.mapper.UserMapper2.findById";
 
     @Benchmark
-    public void setMethodBenchMark(){
-        System.out.println(i++);
-        i++;
+    public void classBenchMark() throws ClassNotFoundException {
+        Class clazz = ReflectUntil.getClassById(id);
     }
 
     @Benchmark
-    public void methodBenchMark(){
-//        System.out.println(i++);
-        i++;
+    public void methodBenchMark() throws NoSuchMethodException {
+        Method method = ReflectUntil.getMethodById(id);
     }
+
 }
