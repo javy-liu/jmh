@@ -37,6 +37,7 @@ public class MethodBenchmark {
     public void classBenchMark() throws ClassNotFoundException {
         Class clazz1 = ReflectUntil.getClassById(id);
         Class clazz2 = ReflectUntil.getClassById(id);
+
     }
 
     @Benchmark

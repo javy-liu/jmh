@@ -41,5 +41,6 @@ dependencies {
             'com.alibaba:druid:1.0.13',
             'com.github.jsqlparser:jsqlparser:0.9.2'
 
+    compile 'com.google.guava:guava:18.0'
 
 }
