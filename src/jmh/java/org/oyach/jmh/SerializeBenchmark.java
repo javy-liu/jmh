@@ -1,7 +1,9 @@
 package org.oyach.jmh;
 
 import org.openjdk.jmh.annotations.*;
+import org.oyach.jmh.domain.*;
 import org.oyach.jmh.ser.*;
+import org.oyach.jmh.ser.User;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,8 +17,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 100) // 迭代次数
 @BenchmarkMode(value = Mode.AverageTime)
 @OutputTimeUnit(value = TimeUnit.MILLISECONDS)
-@Timeout(time = 60)
-@Threads(10)
+@Threads(100)
 public class SerializeBenchmark {
 
 
@@ -102,4 +103,15 @@ public class SerializeBenchmark {
 
     }
 
+    @Benchmark
+    public void thriftBenchMark(){
+        org.oyach.jmh.domain.User user = new org.oyach.jmh.domain.User();
+        user.setId(3L);
+        user.setUsername("oyach");
+        user.setNickname("欧阳澄泓");
+
+        byte[] bytes = ThriftUtil.obj2byte(user);
+
+        org.oyach.jmh.domain.User newUser = ThriftUtil.byte2obj(bytes, org.oyach.jmh.domain.User.class);
+    }
 }
