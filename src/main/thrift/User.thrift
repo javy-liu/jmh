@@ -5,3 +5,4 @@ struct User {
 	2: optional string username,
 	3: optional string nickname,
 }
+

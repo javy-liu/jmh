@@ -6,7 +6,6 @@ import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TIOStreamTransport;
 import org.apache.thrift.transport.TTransport;
-import org.oyach.jmh.domain.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
