@@ -42,19 +42,19 @@ public class ThriftUtilTest {
 //    }
 //
 //
-//    @Test
-//    public void testName() throws Exception {
-//        org.oyach.jmh.domain.User user = new org.oyach.jmh.domain.User();
-//        user.setId(3L);
-//        user.setUsername("oyach");
-//        user.setNickname("欧阳澄泓");
-//
-//        byte[] bytes = ThriftUtil.obj2byte(user);
-//
-//
-//        org.oyach.jmh.domain.User2 newUser = ThriftUtil.byte2obj(bytes, org.oyach.jmh.domain.User2.class);
-//
-//        System.out.println();
-//
-//    }
+    @Test
+    public void testName() throws Exception {
+        org.oyach.jmh.domain.User user = new org.oyach.jmh.domain.User();
+        user.setId(3L);
+        user.setUsername("oyach");
+        user.setNickname("欧阳澄泓");
+
+        byte[] bytes = ThriftUtil.obj2byte(user);
+
+
+        org.oyach.jmh.domain.User2 newUser = ThriftUtil.byte2obj(bytes, org.oyach.jmh.domain.User2.class);
+
+        System.out.println();
+
+    }
 }

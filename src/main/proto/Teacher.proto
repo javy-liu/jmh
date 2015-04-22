@@ -1,0 +1,9 @@
+package org.oyach.jmh.vo;
+
+option java_outer_classname = "TeacherProtos";
+
+message Teacher {
+    required int64 id = 1;
+    required string username = 2;
+    optional string nickename = 3;
+}

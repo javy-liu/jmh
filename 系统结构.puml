@@ -1,0 +1,13 @@
+@startuml
+
+title Simple communication example
+
+[order-service] ---> [order-create]
+[order-service] ---> [order-select]
+[order-service] ---> [order-select-slow]
+
+[order-dao] <-- [order-create]
+[order-dao] <-- [order-select]
+[order-dao] <-- [order-select-slow]
+
+@enduml
