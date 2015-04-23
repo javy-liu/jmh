@@ -3,6 +3,7 @@ package org.oyach.jmh.server;
 import org.junit.Test;
 import org.oyach.jmh.server.mysql.MysqlProxyServer;
 
+import java.nio.charset.Charset;
 import java.sql.*;
 
 /**
@@ -103,6 +104,22 @@ public class ProxyServerTest {
 
         byte[] bytes1 = ByteArrayUtil.toBytes(78);
 
+        System.out.println();
+    }
+
+    @Test
+    public void test04() throws Exception {
+        String head = "\n5.6.23\n";
+
+        byte[] bytes = new byte[]{74, 0, 0, 0, 10, 53, 46, 54, 46, 50, 51, 0, 10, 0, 0, 0, 40, 55, 123, 41, 87, 91, 69,
+                38, 0, -1, -9, 33, 2, 0, 127, -128, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 69, 90, 117, 96, 93, 53, 48,
+                46, 53, 96, 102, 0, 109, 121, 115, 113, 108, 95, 110, 97, 116, 105, 118, 101, 95, 112, 97, 115,
+                115, 119, 111, 114, 100, 0};
+
+        String str = new String(bytes);
+
+        byte[] bytes1 = new byte[]{0, 0, 0, 2, 0, 0, 0};
+        String str2 =  new String(bytes1);
         System.out.println();
     }
 }
