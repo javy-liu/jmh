@@ -5,8 +5,6 @@ import org.oyach.jmh.server.mysql.MysqlProxyServer;
 
 import java.sql.*;
 
-import static org.junit.Assert.*;
-
 /**
  * @author liuzhenyuan
  * @version Last modified 15/4/21

@@ -3,8 +3,6 @@ package org.oyach.jmh.mapper;
 import org.apache.ibatis.io.Resources;
 
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author liuzhenyuan

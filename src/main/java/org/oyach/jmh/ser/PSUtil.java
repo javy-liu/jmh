@@ -3,7 +3,6 @@ package org.oyach.jmh.ser;
 
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtobufIOUtil;
-import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
 

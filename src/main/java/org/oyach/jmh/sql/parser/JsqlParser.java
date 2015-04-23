@@ -1,17 +1,13 @@
 package org.oyach.jmh.sql.parser;
 
-import com.foundationdb.sql.parser.CursorNode;
 import net.sf.jsqlparser.JSQLParserException;
 import net.sf.jsqlparser.parser.CCJSqlParserUtil;
 import net.sf.jsqlparser.schema.Table;
 import net.sf.jsqlparser.statement.Statement;
 import net.sf.jsqlparser.statement.select.PlainSelect;
 import net.sf.jsqlparser.statement.select.Select;
-import net.sf.jsqlparser.util.SelectUtils;
-import net.sf.jsqlparser.util.TablesNamesFinder;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

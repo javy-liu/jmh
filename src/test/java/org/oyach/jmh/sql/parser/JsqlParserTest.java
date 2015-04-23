@@ -2,8 +2,6 @@ package org.oyach.jmh.sql.parser;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class JsqlParserTest {
 
     private static final String select = "select" +

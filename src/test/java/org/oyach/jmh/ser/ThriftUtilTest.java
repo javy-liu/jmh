@@ -2,8 +2,6 @@ package org.oyach.jmh.ser;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * @author liuzhenyuan
  * @version Last modified 15/4/13

@@ -1,6 +1,6 @@
 @startuml
 
-title Simple communication example
+title 模块结构图
 
 [order-service] ---> [order-create]
 [order-service] ---> [order-select]
