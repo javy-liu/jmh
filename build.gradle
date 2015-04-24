@@ -29,6 +29,10 @@ task wrapper(type: Wrapper) {
 
 repositories {
     mavenCentral()
+    maven {
+        url 'http://repo.spring.io/release'
+    }
+
 }
 
 dependencies {
