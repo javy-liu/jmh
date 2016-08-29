@@ -22,7 +22,6 @@ apply plugin: 'me.champeau.gradle.jmh'
 apply plugin: 'thrift'
 
 
-
 task wrapper(type: Wrapper) {
   gradleVersion = '2.3'
 }
